@@ -1,0 +1,55 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Nodejs - Express Typescript",
+    "version": "1.0.0",
+    "title": "Users/Hobbies",
+    "contact": {
+      "email": "rram.ramasamy@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "schemes": ["http"],
+  "host": "localhost:5000",
+  "basePath": "/api",
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get all users",
+        "description": "Get all users",
+        "produces": ["application/json"],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Successful fetch operation for all users",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/usersResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "usersResponse": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "hobbies": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
