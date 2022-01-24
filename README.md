@@ -95,6 +95,7 @@ Sample response for the create user:
 }
 
 ```
+Note: possible values for passionLevel - High, Very-High, Low, Medium
 
 Sample response of create hobby endpoint:
 
