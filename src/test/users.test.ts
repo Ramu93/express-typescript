@@ -11,7 +11,7 @@ describe("Users test", () => {
   });
 
   it("Create user - success", async () => {
-    const userName = "Ramu Ramasamy";
+    const userName = "TEST USER";
     const res = await request.post("/api/users").send({ name: userName });
     expect(res.status).to.equal(201);
     expect(res.body).not.to.be.empty;
@@ -22,7 +22,7 @@ describe("Users test", () => {
 
   it("Get all users - test if created user exists", async () => {
     // create user
-    const userName = "Ramu Ramasamy";
+    const userName = "TEST USER";
     const createRes = await request.post("/api/users").send({ name: userName });
 
     const res = await request.get("/api/users").send();
