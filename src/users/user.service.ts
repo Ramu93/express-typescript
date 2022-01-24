@@ -20,7 +20,7 @@ class UserService implements Service {
   }
 
   findById(id: string): Promise<User> {
-    return this.model.findById(id);
+    return this.model.findById(id).populate("hobbies").exec();
   }
 
   deleteById(id: string): Promise<string> {
