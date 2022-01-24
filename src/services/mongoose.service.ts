@@ -4,10 +4,6 @@ import config from "../config";
 class MongooseService {
   private connection;
 
-  constructor() {
-    this.connect();
-  }
-
   connect() {
     mongoose
       .connect(config.MONGODB_URI, {
