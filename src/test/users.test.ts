@@ -8,7 +8,6 @@ describe("Users test", () => {
   let request: supertest.SuperAgentTest;
   before(function () {
     request = supertest.agent(server);
-    mongooseService.connect();
   });
 
   it("Create user - success", async () => {
